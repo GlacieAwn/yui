@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 1500
+var speed = 2000
 var is_idle = false
 var is_moving = false
 var last_facing_direction: Vector2 = Vector2.DOWN
