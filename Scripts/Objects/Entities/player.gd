@@ -15,8 +15,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	# Input direction gets set to Input.get_vector in _process() instead of _physics_process(). 
-	# This is because _process() runs at a different speed than _physics_process(), and input is something that should be polled every frame rather than during physics timing. Otherwise, you get a sort of "Jump" in the position when a key is pressed, due to _physics_process() being slower
+	# Poll input in process instead of physics_process for timing purposes
 	input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	update_animation()
 
