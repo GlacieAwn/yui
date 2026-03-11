@@ -73,7 +73,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle Front",
-"speed": 2.5
+"speed": 1.5
 }, {
 "frames": [{
 "duration": 5.0,
