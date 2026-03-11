@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://kom1lxldhe11"]
+
+[ext_resource type="Script" uid="uid://cyfkchpdr5n4j" path="res://Scripts/explosion_effect.gd" id="1_p7xvo"]
+[ext_resource type="Texture2D" uid="uid://cfnnbymnh74l4" path="res://Graphics/Sprites/Explosion.png" id="2_cpn6l"]
+
+[sub_resource type="Animation" id="Animation_jbbpb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_dcwgx"]
+resource_name = "explod"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0999056, 0.201143, 0.30005, 0.400528, 0.500101),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k3usa"]
+_data = {
+&"RESET": SubResource("Animation_jbbpb"),
+&"explod": SubResource("Animation_dcwgx")
+}
+
+[node name="Explosion" type="StaticBody2D" unique_id=1696015745]
+z_index = 2
+script = ExtResource("1_p7xvo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=418891454]
+texture = ExtResource("2_cpn6l")
+hframes = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1322518038]
+libraries/ = SubResource("AnimationLibrary_k3usa")
+speed_scale = 2.0

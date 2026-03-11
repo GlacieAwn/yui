@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cym4aki6pcptq"]
+
+[ext_resource type="Shader" uid="uid://cvlteepasquh0" path="res://Scripts/Shaders/Screen_Transition.gdshader" id="1_yn40k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r47fx"]
+shader = ExtResource("1_yn40k")
+shader_parameter/fade_progress = 0.0
+
+[sub_resource type="Animation" id="Animation_4d56j"]
+resource_name = "Fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/fade_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_orgju"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/fade_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cng4s"]
+_data = {
+&"Fade": SubResource("Animation_4d56j"),
+&"RESET": SubResource("Animation_orgju")
+}
+
+[node name="Screen Fade" type="ColorRect" unique_id=11306322]
+material = SubResource("ShaderMaterial_r47fx")
+offset_right = 160.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=992761147]
+libraries/ = SubResource("AnimationLibrary_cng4s")

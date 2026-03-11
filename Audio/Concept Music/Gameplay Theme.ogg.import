@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://8w8r4lv16uah"
+path="res://.godot/imported/Gameplay Theme.ogg-bc1c58ec7cb82d07a70d93186152f97e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Concept Music/Gameplay Theme.ogg"
+dest_files=["res://.godot/imported/Gameplay Theme.ogg-bc1c58ec7cb82d07a70d93186152f97e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=10.667
+bpm=0.0
+beat_count=0
+bar_beats=4

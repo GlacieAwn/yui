@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b881t4tusj30v"
+path="res://.godot/imported/Let's Go!.ogg-f398e659219d61f2345afa7980b1c98e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/DMG/Let's Go!.ogg"
+dest_files=["res://.godot/imported/Let's Go!.ogg-f398e659219d61f2345afa7980b1c98e.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=10.72
+bpm=0
+beat_count=0
+bar_beats=4

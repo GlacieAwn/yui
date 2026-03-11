@@ -1,0 +1,23 @@
+[gd_scene format=4 uid="uid://db8b53yvnw31q"]
+
+[ext_resource type="PackedScene" uid="uid://bij16v552f7v3" path="res://Objects/Entities/player.tscn" id="2_2mfv3"]
+[ext_resource type="Texture2D" uid="uid://cee2goj8jamki" path="res://Graphics/Background Tiles/Forest-Day.png" id="2_rdr5n"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dei4c"]
+texture = ExtResource("2_rdr5n")
+0:0/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_71et6"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dei4c")
+
+[node name="Movement Test" type="Node2D" unique_id=256746038]
+
+[node name="Tilemap Layer" type="TileMapLayer" parent="." unique_id=986362651]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAADAAIAAAAAAAAAAAACAAIAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_71et6")
+
+[node name="Player" parent="." unique_id=463716170 instance=ExtResource("2_2mfv3")]
+position = Vector2(63, 39)
