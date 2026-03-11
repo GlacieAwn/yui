@@ -22,8 +22,8 @@ SceneManager="*res://Scripts/scene_manager.gd"
 
 [display]
 
-window/size/viewport_width=128
-window/size/viewport_height=72
+window/size/viewport_width=160
+window/size/viewport_height=90
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"

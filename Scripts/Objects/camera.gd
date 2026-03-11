@@ -9,7 +9,7 @@ var map_max: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	make_current()
-	update_camera_limits()
+	clamp_camera()
 
 
 func _process(_delta: float) -> void:
@@ -22,16 +22,14 @@ func _process(_delta: float) -> void:
 	global_position = target.global_position
 
 
-func update_camera_limits() -> void:
+func clamp_camera() -> void:
 	if map == null:
 		return
 
 	if map.tile_set == null:
 		return
 
-	var used_rect: Rect2i = map.get_used_rect()
-	if used_rect.size == Vector2i.ZERO:
-		return
+	var used_rect = map.get_used_rect()
 
 	var cell_size: Vector2 = Vector2(map.tile_set.tile_size)
 	var top_left_local: Vector2 = Vector2(used_rect.position) * cell_size
