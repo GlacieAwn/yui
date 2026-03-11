@@ -2,10 +2,9 @@ extends Camera2D
 
 @export var map: TileMapLayer
 @export var target: CharacterBody2D
-@export var camera_offset: float = 50.0
 
-var world_min: Vector2 = Vector2.ZERO
-var world_max: Vector2 = Vector2.ZERO
+var map_min: Vector2 = Vector2.ZERO
+var map_max: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
@@ -21,10 +20,6 @@ func _process(_delta: float) -> void:
 		return
 
 	global_position = target.global_position
-	global_position = Vector2(
-		clamp(global_position.x, world_min.x, world_max.x),
-		clamp(global_position.y, world_min.y, world_max.y)
-	)
 
 
 func update_camera_limits() -> void:
@@ -45,16 +40,16 @@ func update_camera_limits() -> void:
 	var top_left_world: Vector2 = map.to_global(top_left_local)
 	var bottom_right_world: Vector2 = map.to_global(bottom_right_local)
 
-	world_min = Vector2(
-		min(top_left_world.x, bottom_right_world.x) + camera_offset,
-		min(top_left_world.y, bottom_right_world.y) + camera_offset
+	map_min = Vector2(
+		min(top_left_world.x, bottom_right_world.x),
+		min(top_left_world.y, bottom_right_world.y)
 	)
-	world_max = Vector2(
-		max(top_left_world.x, bottom_right_world.x) - camera_offset,
-		max(top_left_world.y, bottom_right_world.y) - camera_offset
+	map_max = Vector2(
+		max(top_left_world.x, bottom_right_world.x),
+		max(top_left_world.y, bottom_right_world.y)
 	)
 
-	limit_left = int(world_min.x)
-	limit_top = int(world_min.y)
-	limit_right = int(world_max.x)
-	limit_bottom = int(world_max.y)
+	limit_left = int(map_min.x)
+	limit_top = int(map_min.y)
+	limit_right = int(map_max.x)
+	limit_bottom = int(map_max.y)
