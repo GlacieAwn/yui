@@ -139,3 +139,7 @@ animation = &"Idle Front"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=275559056]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_yq6kl")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1705370440]
+target_position = Vector2(24, 0)
+collide_with_areas = true

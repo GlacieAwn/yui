@@ -9,6 +9,8 @@ var is_interacting = false
 
 var input_direction: Vector2 # reference to the input direction that will be set in _process. 
 
+@onready var interaction_ray = $RayCast2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +21,21 @@ func _process(_delta: float) -> void:
 	# Poll input in process instead of physics_process for timing purposes
 	input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	update_animation()
+
+	var interaction_direction := last_facing_direction
+	if input_direction != Vector2.ZERO:
+		interaction_direction = input_direction
+
+	interaction_ray.rotation = interaction_direction.angle()
+	
+
+	interaction_ray.force_raycast_update()
+	if interaction_ray.is_colliding():
+		# print("Test")
+		var collider = interaction_ray.get_collider()
+		if Input.is_action_just_pressed("Interact"):
+			if collider != null and collider.has_method("on_interact"):
+				collider.on_interact()
 
 func _physics_process(_delta: float) -> void:
 	if not is_interacting:
