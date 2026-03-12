@@ -12,7 +12,6 @@ var input_direction: Vector2 # reference to the input direction that will be set
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimatedSprite2D.play("Idle Front")
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
