@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bij16v552f7v3"]
 
-[ext_resource type="Script" uid="uid://fvuqy82jpa3v" path="res://Scripts/Objects/Entities/player.gd" id="1_7atm0"]
+[ext_resource type="Script" uid="uid://f7t05l8d0k5x" path="res://Scripts/Objects/Entities/player.gd" id="1_7atm0"]
 [ext_resource type="Texture2D" uid="uid://cdoffnqfgrl0k" path="res://Graphics/Sprites/yui_spritesheet.png" id="1_p63ey"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p63ey"]
@@ -127,7 +127,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq6kl"]
-size = Vector2(16, 15)
+size = Vector2(16, 12)
 
 [node name="Player" type="CharacterBody2D" unique_id=463716170]
 script = ExtResource("1_7atm0")
@@ -137,5 +137,9 @@ sprite_frames = SubResource("SpriteFrames_v8blt")
 animation = &"Idle Front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=275559056]
-position = Vector2(0, 0.5)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_yq6kl")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1705370440]
+target_position = Vector2(24, 0)
+collide_with_areas = true
