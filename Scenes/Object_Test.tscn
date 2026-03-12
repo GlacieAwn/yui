@@ -1,0 +1,42 @@
+[gd_scene format=4 uid="uid://bteoclw7u2c1x"]
+
+[ext_resource type="Texture2D" uid="uid://cee2goj8jamki" path="res://Graphics/Background Tiles/Forest-Day.png" id="1_bxjg6"]
+[ext_resource type="PackedScene" uid="uid://bij16v552f7v3" path="res://Objects/Entities/player.tscn" id="2_hda56"]
+[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="3_a84xk"]
+[ext_resource type="PackedScene" uid="uid://b3r1l1m8ep68n" path="res://Objects/Interactable/Door.tscn" id="4_hda56"]
+[ext_resource type="PackedScene" uid="uid://dg24w044i4btp" path="res://Objects/Interactable/Chest.tscn" id="5_xl7yh"]
+[ext_resource type="PackedScene" uid="uid://buib1r4vjnc6i" path="res://Objects/Interactable/Rocks.tscn" id="6_objsk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dei4c"]
+texture = ExtResource("1_bxjg6")
+0:0/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_71et6"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dei4c")
+
+[node name="Movement Test" type="Node2D" unique_id=256746038]
+
+[node name="Tilemap Layer" type="TileMapLayer" parent="." unique_id=986362651]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_71et6")
+
+[node name="Player" parent="." unique_id=463716170 instance=ExtResource("2_hda56")]
+z_index = 1
+position = Vector2(80, 51)
+
+[node name="Camera" parent="." unique_id=1164827272 node_paths=PackedStringArray("map", "target") instance=ExtResource("3_a84xk")]
+position = Vector2(80, 45)
+map = NodePath("../Tilemap Layer")
+target = NodePath("../Player")
+
+[node name="Door" parent="." unique_id=1477009305 instance=ExtResource("4_hda56")]
+position = Vector2(50, 14)
+
+[node name="Chest" parent="." unique_id=1434902674 instance=ExtResource("5_xl7yh")]
+position = Vector2(87, 15)
+
+[node name="Rocks" parent="." unique_id=145660477 instance=ExtResource("6_objsk")]
+position = Vector2(119, 16)

@@ -5,7 +5,7 @@ var is_idle = false
 var is_moving = false
 var last_facing_direction: Vector2 = Vector2.DOWN
 
-var is_interacting = true
+var is_interacting = false
 
 var input_direction: Vector2 # reference to the input direction that will be set in _process. 
 
