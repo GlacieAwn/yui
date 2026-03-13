@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cee2goj8jamki" path="res://Graphics/Background Tiles/Forest-Day.png" id="1_bxjg6"]
 [ext_resource type="PackedScene" uid="uid://bij16v552f7v3" path="res://Objects/Entities/player.tscn" id="2_hda56"]
-[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="3_a84xk"]
+[ext_resource type="PackedScene" uid="uid://d2samxq472llc" path="res://Objects/Camera.tscn" id="3_a84xk"]
 [ext_resource type="PackedScene" uid="uid://b3r1l1m8ep68n" path="res://Objects/Interactable/Door.tscn" id="4_hda56"]
 [ext_resource type="PackedScene" uid="uid://dg24w044i4btp" path="res://Objects/Interactable/Chest.tscn" id="5_xl7yh"]
 [ext_resource type="PackedScene" uid="uid://buib1r4vjnc6i" path="res://Objects/Interactable/Rocks.tscn" id="6_objsk"]
