@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bteoclw7u2c1x"]
+[gd_scene format=4 uid="uid://opsq2nyxy6hh"]
 
 [ext_resource type="Texture2D" uid="uid://cee2goj8jamki" path="res://Graphics/Background Tiles/Forest-Day.png" id="1_bxjg6"]
 [ext_resource type="PackedScene" uid="uid://bij16v552f7v3" path="res://Objects/Entities/player.tscn" id="2_hda56"]
