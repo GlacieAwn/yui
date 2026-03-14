@@ -33,7 +33,7 @@ layout/style_directory={
 "SpeakerStyle": "res://Dialogue/SpeakerStyle.tres"
 }
 variables={}
-layout/style_list=["", "res://Dialogue/SpeakerStyle.tres"]
+layout/style_list=["res://Dialogue/SpeakerStyle.tres"]
 layout/default_style=""
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.05
