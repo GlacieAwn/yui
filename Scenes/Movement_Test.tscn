@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bij16v552f7v3" path="res://Objects/Entities/player.tscn" id="2_2mfv3"]
 [ext_resource type="Texture2D" uid="uid://cee2goj8jamki" path="res://Graphics/Background Tiles/Forest-Day.png" id="2_rdr5n"]
-[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="3_rdr5n"]
+[ext_resource type="PackedScene" uid="uid://d2samxq472llc" path="res://Objects/Camera.tscn" id="3_rdr5n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dei4c"]
 texture = ExtResource("2_rdr5n")

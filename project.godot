@@ -16,10 +16,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*uid://cn3phu0fnfcf7"
-AudioManager="*res://Scripts/audio_manager.gd"
-SceneManager="*res://Scripts/scene_manager.gd"
 Dialogic="*uid://ds2q0uclmolvu"
+AudioManager="*uid://d1bvl2jq3j72v"
+SceneManager="*uid://p3ejq74e3sm1"
+Global="*uid://cn3phu0fnfcf7"
 
 [dialogic]
 
@@ -74,8 +74,8 @@ glossary/default_case_sensitive=true
 
 [display]
 
-window/size/viewport_width=256
-window/size/viewport_height=144
+window/size/viewport_width=160
+window/size/viewport_height=90
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
