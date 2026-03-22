@@ -13,6 +13,7 @@ func load_scene(path: String, free: bool) -> Node:
 		if free:
 			# Delete the scene if free is true
 			scene_instance.queue_free()
+			await get_tree().process_frame
 		else:
 			# Hide the scene if free is false
 			scene_instance.hide()
@@ -20,8 +21,9 @@ func load_scene(path: String, free: bool) -> Node:
 	# Load the scene file from the given path
 	var loaded_scene = ResourceLoader.load(path)
 	# Exit early if the scene failed to load
+	assert(loaded_scene != null, "Failed to load scene")
 	if loaded_scene == null:
-		return
+		return null
 	
 	# Create an instance of the loaded scene
 	scene_instance = loaded_scene.instantiate()
