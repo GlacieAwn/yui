@@ -3,12 +3,7 @@ extends Node
 var player_turn_finished: bool
 var enemy_turn_finished: bool
 
-enum BATTLE_STATES {
-	PLAYER_TURN,
-	ENEMY_TURN,
-	WIN,
-	DEFEAT
-}
+enum BATTLE_STATES { PLAYER_TURN, ENEMY_TURN, WIN, DEFEAT, RESOLUTION }
 
 var state: BATTLE_STATES
 func _ready() -> void:
@@ -37,6 +32,8 @@ func update_battle() -> void:
 		BATTLE_STATES.WIN:
 			pass
 		BATTLE_STATES.DEFEAT: 
+			pass
+		BATTLE_STATES.RESOLUTION:
 			pass	
 		_:
 			pass

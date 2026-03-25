@@ -11,6 +11,12 @@ var input_direction: Vector2 # reference to the input direction that will be set
 
 @onready var interaction_ray = $RayCast2D
 
+# Player stats are here until I figure out if they need to be in a seperate script
+var hp: int
+var sp: int
+var xp: int
+var lvl: int
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
