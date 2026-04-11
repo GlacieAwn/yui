@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b3r1l1m8ep68n" path="res://Objects/Interactable/Door.tscn" id="4_hda56"]
 [ext_resource type="PackedScene" uid="uid://dg24w044i4btp" path="res://Objects/Interactable/Chest.tscn" id="5_xl7yh"]
 [ext_resource type="PackedScene" uid="uid://buib1r4vjnc6i" path="res://Objects/Interactable/Rocks.tscn" id="6_objsk"]
+[ext_resource type="Script" uid="uid://d15qukh3yv2er" path="res://Scripts/Objects/Entities/rock.gd" id="7_objsk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dei4c"]
 texture = ExtResource("1_bxjg6")
@@ -34,9 +35,13 @@ target = NodePath("../Player")
 
 [node name="Door" parent="." unique_id=1477009305 instance=ExtResource("4_hda56")]
 position = Vector2(48, 14)
+dialogue = "It's Locked..."
 
 [node name="Chest" parent="." unique_id=1434902674 instance=ExtResource("5_xl7yh")]
 position = Vector2(85, 15)
+dialogue = "Can't open this.."
 
 [node name="Rocks" parent="." unique_id=145660477 instance=ExtResource("6_objsk")]
 position = Vector2(117, 16)
+script = ExtResource("7_objsk")
+dialogue = "...This is a rock. What am I supposed to do with this?"

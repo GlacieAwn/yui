@@ -11,6 +11,11 @@ var input_direction: Vector2 # reference to the input direction that will be set
 
 @onready var interaction_ray = $RayCast2D
 
+# Player stats are here until I figure out if they need to be in a seperate script
+var hp: int
+var sp: int
+var xp: int
+var lvl: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +23,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	is_interacting = Dialogic.current_timeline != null
+
 	# Poll input in process instead of physics_process for timing purposes
 	input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	update_animation()
