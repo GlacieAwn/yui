@@ -19,6 +19,7 @@ var splash_done: bool = false
 # var explosion_animation: PackedScene = preload("res://Objects/Effects/Explosion.tscn")
 
 # Preloaded Audio
+var snowflake_house
 # var title_theme_dmg = preload("res://Audio/DMG/Title.ogg")
 # var gameplay_theme_dmg = preload("res://Audio/DMG/Let's Go!.ogg")
 

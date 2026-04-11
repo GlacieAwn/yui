@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bv1pb4m7qrywd"]
 
 [ext_resource type="Shader" uid="uid://1a4abv3oa6km" path="res://Scripts/Shaders/lcd.gdshader" id="1_kldst"]
-[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="2_7lihs"]
 [ext_resource type="PackedScene" path="res://Objects/AudioManager.tscn" id="3_7lihs"]
 [ext_resource type="PackedScene" uid="uid://cym4aki6pcptq" path="res://Objects/Effects/Screen Fade.tscn" id="3_b2bpf"]
 [ext_resource type="PackedScene" path="res://Objects/ui.tscn" id="6_fgofq"]
@@ -81,7 +80,6 @@ _data = {
 [node name="Game_tscn" type="Node2D" unique_id=1744175416]
 process_mode = 1
 material = SubResource("ShaderMaterial_418ah")
-script = ExtResource("2_7lihs")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1141519522]
 handle_input_locally = false
@@ -100,5 +98,7 @@ libraries/ = SubResource("AnimationLibrary_2irst")
 [node name="UI" parent="." unique_id=1053586248 instance=ExtResource("6_fgofq")]
 
 [node name="Screen Fade" parent="." unique_id=11306322 instance=ExtResource("3_b2bpf")]
+visible = false
 
 [node name="AudioManager" parent="." unique_id=1675594417 instance=ExtResource("3_7lihs")]
+script = null

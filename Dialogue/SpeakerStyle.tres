@@ -38,9 +38,11 @@ overrides = {
 "custom_normal_font": "\"res://Graphics/font.png\"",
 "name_label_custom_size": "5.0",
 "name_label_customfont": "\"res://Graphics/font.png\"",
+"name_label_hide_when_no_character": "true",
 "name_label_use_global_font": "false",
 "name_label_use_global_size": "false",
-"portrait_bg_modulate": "Color(0, 0, 0, 0)",
+"portrait_bg_modulate": "Color(0.5996094, 0.41574478, 0.41574478, 0)",
+"portrait_position": "1",
 "portrait_stretch_factor": "0.4",
 "text_custom_size": "4.0",
 "text_use_global_size": "false",
@@ -77,4 +79,4 @@ layer_info = {
 "15": SubResource("Resource_relwi"),
 "16": SubResource("Resource_70auu")
 }
-metadata/_latest_layer = "12"
+metadata/_latest_layer = "10"

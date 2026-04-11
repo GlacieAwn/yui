@@ -17,13 +17,14 @@ var sp: int
 var xp: int
 var lvl: int
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	is_interacting = Dialogic.current_timeline != null
+
 	# Poll input in process instead of physics_process for timing purposes
 	input_direction = Input.get_vector("Left", "Right", "Up", "Down")
 	update_animation()
