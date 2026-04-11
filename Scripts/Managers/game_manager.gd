@@ -1,7 +1,7 @@
 extends Node
 
 
-@export var entry_scene: Scene
+@export var test_music: AudioStream
 # var title_scene_loaded: bool = false
 # var gameplay_loaded: bool = false
 # var cur = 0
@@ -13,10 +13,12 @@ func _ready() -> void:
 	# Global.score = 0
 
 	$"Screen Fade/AnimationPlayer".play("RESET")
-	Global.audio_manager.play_music()
+	Global.audio_manager.play_music(test_music)
 
 
 func _process(_delta: float) -> void:
+	var entry_scene_instance = Global.scene_manager.load_scene("res://Scenes/Object_Test.tscn", false)
+	$SubViewport.add_child(entry_scene_instance)
 	# if title_scene_loaded and Input.is_action_just_pressed("Start") and not gameplay_loaded:
 	# 	Global.audio_manager.stop_music()
 	# 	$"UI/HighScoreText".hide()
