@@ -30,6 +30,9 @@ position = Vector2(80, 51)
 
 [node name="Camera" parent="." unique_id=1164827272 node_paths=PackedStringArray("map", "target") instance=ExtResource("3_a84xk")]
 position = Vector2(80, 45)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
 map = NodePath("../Tilemap Layer")
 target = NodePath("../Player")
 

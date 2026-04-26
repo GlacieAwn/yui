@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bgupworo3uaq6" path="res://Scripts/Managers/game_manager.gd" id="2_b2bpf"]
 [ext_resource type="PackedScene" path="res://Objects/AudioManager.tscn" id="3_7lihs"]
 [ext_resource type="PackedScene" uid="uid://cym4aki6pcptq" path="res://Objects/Effects/Screen Fade.tscn" id="3_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://opsq2nyxy6hh" path="res://Scenes/Object_Test.tscn" id="4_2irst"]
 [ext_resource type="AudioStream" uid="uid://digiprdc6su68" path="res://Audio/Test Music/Snowflake House.ogg" id="4_fgofq"]
 [ext_resource type="PackedScene" path="res://Objects/ui.tscn" id="6_fgofq"]
 
@@ -84,16 +85,16 @@ process_mode = 1
 material = SubResource("ShaderMaterial_418ah")
 script = ExtResource("2_b2bpf")
 test_music = ExtResource("4_fgofq")
+entry_scene = ExtResource("4_2irst")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1141519522]
-handle_input_locally = false
-snap_2d_transforms_to_pixel = true
-snap_2d_vertices_to_pixel = true
+canvas_item_default_texture_filter = 0
 size = Vector2i(160, 90)
 size_2d_override = Vector2i(160, 90)
 size_2d_override_stretch = true
 
 [node name="Game View" type="Sprite2D" parent="." unique_id=614924377]
+visible = false
 position = Vector2(80, 45)
 texture = SubResource("ViewportTexture_pmv0v")
 
@@ -107,3 +108,5 @@ visible = false
 
 [node name="AudioManager" parent="." unique_id=1675594417 instance=ExtResource("3_7lihs")]
 script = null
+
+[node name="Game" type="Node" parent="." unique_id=1411366991]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="yui"
-run/main_scene="uid://opsq2nyxy6hh"
+run/main_scene="uid://bv1pb4m7qrywd"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -26,9 +26,12 @@ BattleActions="*uid://cbkfrgirn301d"
 [dialogic]
 
 directories/dch_directory={
+"???": "res://Dialogue/???.dch",
+"Hikari": "res://Dialogue/Hikari.dch",
 "Yui": "res://Dialogue/Yui.dch"
 }
 directories/dtl_directory={
+"intro": "res://Dialogue/Forest/intro.dtl",
 "test_timeline": "res://Dialogue/test_timeline.dtl"
 }
 layout/style_directory={

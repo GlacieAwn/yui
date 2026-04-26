@@ -8,6 +8,10 @@ var map_max: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
+	reset_smoothing()
+	position_smoothing_enabled = true
+	limit_smoothed = true
+	position_smoothing_speed = 20.0
 	make_current()
 	clamp_camera()
 
