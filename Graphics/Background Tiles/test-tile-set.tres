@@ -1,0 +1,12 @@
+[gd_resource type="TileSet" format=3 uid="uid://cb6oik53mmkm"]
+
+[ext_resource type="Texture2D" uid="uid://cee2goj8jamki" path="res://Graphics/Background Tiles/Forest-Day.png" id="1_b8y05"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dei4c"]
+texture = ExtResource("1_b8y05")
+0:0/0 = 0
+2:3/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_dei4c")
